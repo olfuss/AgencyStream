@@ -12,9 +12,10 @@ element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
 element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 element = driver.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver.quit();
-driver2 = Selenium::WebDriver.for :firefox
 
 #Test PowerForms ID Card form and all fields
+
+driver2 = Selenium::WebDriver.for :firefox
 
 driver2.navigate.to "https://test.quomation.com/login.aspx"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
@@ -28,17 +29,30 @@ element = driver2.find_element(:id, 'btnPowerForms_text').click
 sleep(5)
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragPowerForms')
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnDefaultIDCard').click
-element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtState').click
-#	element.send_keys "RS"
-element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompanyNumber').click
+driver2.quit();
+
+driver3 = Selenium::WebDriver.for :firefox
+
+driver3.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
+	element.send_keys "65789"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
+	element.send_keys "jwilcox"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
+	element.send_keys "jw"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtState').click
+	element.send_keys "RS"
+#element.send_keys "RS"
+#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompanyNumber').click
 #	element.send_keys "CompanySendKeySent"
-element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompany').click
+#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompany').click
 #	element.send_keys "TestCompanySent"
-element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
-element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
-element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
-element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
-element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNumber').click
+#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
+#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
+#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
+#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
+#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNumber').click
 #	element.send_keys "PolicyNumberKeySent"
 
 

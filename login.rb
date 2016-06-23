@@ -14,7 +14,6 @@ element = driver.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver.quit();
 driver2 = Selenium::WebDriver.for :firefox
 
-#restart driver 1 (window 1) and continue.
 #Test PowerForms ID Card form and all fields
 
 driver2.navigate.to "https://test.quomation.com/login.aspx"
@@ -29,17 +28,17 @@ element = driver2.find_element(:id, 'btnPowerForms_text').click
 sleep(5)
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragPowerForms')
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnDefaultIDCard').click
-#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtState').click
+element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtState').click
 #	element.send_keys "RS"
-#element = driver2.find_element(:id, 'ctl00$ContentPlaceHolder1$txtCompanyNumber').click
+element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompanyNumber').click
 #	element.send_keys "CompanySendKeySent"
-#element = driver2.find_element(:id, 'ctl00$ContentPlaceHolder1$txtCompany').click
+element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompany').click
 #	element.send_keys "TestCompanySent"
-#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
-#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
-#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
-#element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
-#element = driver2.find_element(:id, 'ctl00$ContentPlaceHolder1$txtPolicyNumber').click
+element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
+element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
+element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
+element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
+element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNumber').click
 #	element.send_keys "PolicyNumberKeySent"
 
 

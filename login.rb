@@ -101,15 +101,30 @@ expdate = wait.until {
 	element if element.displayed?
 }
 	expdate.click
-	
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtYear').click
-#	element.send_keys "2001"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtMake').click
-#	element.send_keys "Panzer"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtModel').click
-#	element.send_keys "Panzerkampfwagen IV"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtVIN').click
-#	element.send_keys "PKW60012938"
+
+year = wait.until {
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtYear')
+	element if element.displayed?
+}
+	year.send_keys("1944")
+
+make = wait.until {
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtMake')
+	element if element.displayed?
+}
+	make.send_keys("Panzer")
+
+model = wait.until {
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtModel')
+	element if element.displayed?
+}
+	model.send_keys("Panzerkampfwagen IV")
+
+vin = wait.until {
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtVIN')
+	element if element.displayed?
+}
+	vin.send_keys("PKW60012938")
 
 #Add code to validate the locked field entries for AGENCY/COMPANY ISSUING CARD
 #element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtAgencyName')
@@ -125,16 +140,36 @@ expdate = wait.until {
 #element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$mskAgencyZip')
 #    driver.verify? text = "84047" 
 
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtInsuredName')
-#	element.send_keys "Vladimir Putin"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtInsuredAddress').click
-#	element.send_keys "Somewhere in Russia in Russian House #{1}"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtInsuredCity').click
-#	element.send_keys "Testity"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtInsuredState').click
-#	element.send_keys "RU"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$mskInsuredZip').click
-#	element.send_keys "84070"
+name = wait.until {
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredName')
+	element if element.displayed?
+}
+	name.send_keys("Vladimir Putin")
+
+address = wait.until {
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress')
+	element if element.displayed?
+}
+	address.send_keys("Somewhere in Russia in Russian House #{1}")
+
+city = wait.until {
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredCity')
+	element if element.displayed?
+}
+	city.send_keys("Ovechkination")
+
+state = wait.until {
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredState')
+	element if element.displayed?
+}
+	state.send_keys("UT")
+
+zip = wait.until {
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredZip')
+	element if element.displayed?
+}
+	zip.send_keys("84070")
+
 
 # Currently verifies buttons exist but we need to add code to push a print to .pdf and send an email.
 

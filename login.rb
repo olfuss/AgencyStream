@@ -165,7 +165,7 @@ state = wait.until {
 	state.send_keys("UT")
 
 zip = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredZip')
+	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskInsuredZip')
 	element if element.displayed?
 }
 	zip.send_keys("84070")

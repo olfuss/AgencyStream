@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'selenium-webdriver'
 
-driver = Selenium::Webdriver.for :firefox
+driver = Selenium::WebDriver.for :firefox
 	driver.navigate.to "https://test.quomation.com/login.aspx"
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 			element.send_keys "65789"

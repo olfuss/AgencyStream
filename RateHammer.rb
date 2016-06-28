@@ -3,7 +3,7 @@ require 'selenium-webdriver'
 
 wait = Selenium::WebDriver::Wait.new(:timeout => 15)
 
-i=0
+i=1
 loop do 
 	i+=1
 		
@@ -39,5 +39,5 @@ loop do
 		}
 			element.send_keys(:control, '7')
 	
-	break if i==10
+	break if i==0
 end

@@ -172,20 +172,41 @@ zip = wait.until {
 
 
 # Currently verifies buttons exist but we need to add code to push a print to .pdf and send an email.
+# Need to scroll down to test bottom buttons.
 
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$btnPrint')
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$btnEmail')
+ #element = dirver4.find_element(:xpath, "xpath of nearby visible element")
+  #element.location_once_scrolled_into_view
+  #my_element = driver.find_element(:xpath, "xpath of your element")
+  #my_element.click
+
+element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').last.location_once_scrolled_into_view
+element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
 
 # All form fields of the ID card are tested.
 
-#driver.quit();
+driver3.quit();
 
 # Test the Insurance Binder form
 
-#driver.navigate.to "https://test.quomation.com/login.aspx"
-#element = driver.find_element(:id, 'btnPowerForms_text').click
-#element = driver.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragPowerForms')
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolderSidebar$btnBinder').click
+driver4 = Selenium::WebDriver.for :firefox
+wait = Selenium::WebDriver::Wait.new(:timeout => 15)
 
-#Driver (window 2) operations
-#driver2.navigate.to "https://www.quomation.com/livechat.aspx?AgencyStream=True&name=I_Am_Robot&agency=Kitten_Suicide_Clan&phone=(801)%205555555"
+driver4.navigate.to "https://test.quomation.com/login.aspx"
+
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
+			element.send_keys "65789"
+		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
+			element.send_keys "jwilcox"
+		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
+			element.send_keys "jw"
+		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+
+pwrforms = wait.until {
+	element = driver4.find_element(:id, 'btnPowerForms_text')
+	element if element.displayed?
+}
+	pwrforms.click
+
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragPowerForms')
+element = driver4.find_element(:id, 'ctl00$ContentPlaceHolderSidebar$btnBinder').click
+

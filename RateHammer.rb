@@ -8,6 +8,7 @@ loop do
 	i+=1
 		
 		driver = Selenium::WebDriver.for :firefox
+		print("Iteration #{i} Started")
 		driver.navigate.to "https://test.quomation.com/login.aspx"
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")

@@ -1,17 +1,5 @@
 require 'rubygems'
 require 'selenium-webdriver'
-require 'logger'
-
-logger = Logger.new(STDOUT)
-	logger.level=Logger::DEBUG
-		path = "RateHammerLog.txt"
-	
-begin
-  File.foreach(path) do |line|
-    unless line =~ /^(\w+) = (.*)$/
-      logger.error("Line in wrong format: #{line.chomp}")
-    end
-  end
 
 wait = Selenium::WebDriver::Wait.new(:timeout => 15)
 

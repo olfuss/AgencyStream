@@ -24,9 +24,9 @@ loop do
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -57,9 +57,9 @@ loop do
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -90,9 +90,9 @@ loop do
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -123,9 +123,9 @@ loop do
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -156,9 +156,9 @@ loop do
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -189,9 +189,9 @@ loop do
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -216,15 +216,15 @@ loop do
 		}
 			element.send_keys(:control, '7')
 			
-		driver = Selenium::WebDriver.for :firefox
+		driver7 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 7 #{i} Started")
 		driver7.navigate.to "https://www.agencystream.com/login.aspx"
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -255,9 +255,9 @@ loop do
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -274,7 +274,7 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote8}"
+		driver8.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote8}"
 
 		load = wait.until {
 			element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
@@ -288,9 +288,9 @@ loop do
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -321,9 +321,9 @@ loop do
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {

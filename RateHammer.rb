@@ -43,7 +43,7 @@ loop do
 			element if element.displayed?
 		}
 			uppnlclnt.click
-
+			
 		driver.navigate.to "https://test.quomation.com/HomeQuote.aspx?qid=#{quote1}"
 
 		load = wait.until {

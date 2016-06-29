@@ -181,7 +181,7 @@ loop do
 			element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			element.send_keys(:control, '6')
 			
 		driver6 = Selenium::WebDriver.for :firefox
 		print("Iteration #{i} Started")
@@ -214,7 +214,7 @@ loop do
 			element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			element.send_keys(:control, '6')
 			
 		driver7 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 7 #{i} Started")
@@ -247,7 +247,7 @@ loop do
 			element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			element.send_keys(:control, '6')
 	
 		driver8 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 8 #{i} Started")
@@ -280,7 +280,7 @@ loop do
 			element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			element.send_keys(:control, '6')
 	
 		driver9 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 9 #{i} Started")
@@ -313,7 +313,7 @@ loop do
 			element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			element.send_keys(:control, '6')
 
 		driver10 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 10 #{i} Started")
@@ -346,7 +346,7 @@ loop do
 			element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			element.send_keys(:control, '6')
 	
 	break if i==0
 end

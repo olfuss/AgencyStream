@@ -4,10 +4,10 @@ require 'selenium-webdriver'
 wait = Selenium::WebDriver::Wait.new(:timeout => 30)
 
 quote1 = 1061943424
-quote2 = 1248091520
-quote3 = 790520320
+quote2 = 420524954
+quote3 = 901695744
 quote4 = 390242816
-quote5 = 1079073792
+quote5 = 1130485888
 quote6 = 1168224512
 quote7 = 1002762048
 quote8 = 1058327424
@@ -20,7 +20,7 @@ loop do
 		
 		driver = Selenium::WebDriver.for :firefox
 		print("Iteration #{i} Started")
-		driver.navigate.to "https://www.agencystream.com/login.aspx"
+		driver.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
@@ -53,7 +53,7 @@ loop do
 
 		driver2 = Selenium::WebDriver.for :firefox
 		print("Iteration driver2 #{i} Started")
-		driver2.navigate.to "https://www.agencystream.com/login.aspx"
+		driver2.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
@@ -86,7 +86,7 @@ loop do
 			
 		driver3 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 3 #{i} Started")
-		driver3.navigate.to "https://www.agencystream.com/login.aspx"
+		driver3.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
@@ -119,7 +119,7 @@ loop do
 			
 		driver4 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 4 #{i} Started")
-		driver4.navigate.to "https://www.agencystream.com/login.aspx"
+		driver4.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
@@ -152,7 +152,7 @@ loop do
 				
 		driver5 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 5 #{i} Started")
-		driver5.navigate.to "https://www.agencystream.com/login.aspx"
+		driver5.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
@@ -185,7 +185,7 @@ loop do
 			
 		driver6 = Selenium::WebDriver.for :firefox
 		print("Iteration #{i} Started")
-		driver6.navigate.to "https://www.agencystream.com/login.aspx"
+		driver6.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
@@ -218,7 +218,7 @@ loop do
 			
 		driver7 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 7 #{i} Started")
-		driver7.navigate.to "https://www.agencystream.com/login.aspx"
+		driver7.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
@@ -251,7 +251,7 @@ loop do
 	
 		driver8 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 8 #{i} Started")
-		driver8.navigate.to "https://www.agencystream.com/login.aspx"
+		driver8.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
@@ -284,7 +284,7 @@ loop do
 	
 		driver9 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 9 #{i} Started")
-		driver9.navigate.to "https://www.agencystream.com/login.aspx"
+		driver9.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
@@ -317,7 +317,7 @@ loop do
 
 		driver10 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 10 #{i} Started")
-		driver10.navigate.to "https://www.agencystream.com/login.aspx"
+		driver10.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')

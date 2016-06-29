@@ -24,9 +24,9 @@ loop do
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -43,13 +43,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote1}"
+		driver.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote1}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 
 		driver2 = Selenium::WebDriver.for :firefox
 		print("Iteration driver2 #{i} Started")
@@ -57,9 +65,9 @@ loop do
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -76,13 +84,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver2.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote2}"
+		driver2.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote2}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 			
 		driver3 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 3 #{i} Started")
@@ -90,9 +106,9 @@ loop do
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -109,13 +125,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver3.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote3}"
+		driver3.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote3}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 			
 		driver4 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 4 #{i} Started")
@@ -123,9 +147,9 @@ loop do
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -142,13 +166,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver4.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote4}"
+		driver4.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote4}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 				
 		driver5 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 5 #{i} Started")
@@ -156,9 +188,9 @@ loop do
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -175,13 +207,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver5.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote5}"
+		driver5.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote5}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 			
 		driver6 = Selenium::WebDriver.for :firefox
 		print("Iteration #{i} Started")
@@ -189,9 +229,9 @@ loop do
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -208,13 +248,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver6.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote6}"
+		driver6.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote6}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 			
 		driver7 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 7 #{i} Started")
@@ -222,9 +270,9 @@ loop do
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -241,13 +289,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver7.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote7}"
+		driver7.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote7}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 	
 		driver8 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 8 #{i} Started")
@@ -255,9 +311,9 @@ loop do
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -274,13 +330,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver8.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote8}"
+		driver8.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote8}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 	
 		driver9 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 9 #{i} Started")
@@ -288,9 +352,9 @@ loop do
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -307,13 +371,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver9.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote9}"
+		driver9.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote9}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 
 		driver10 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 10 #{i} Started")
@@ -321,9 +393,9 @@ loop do
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("olfuss.ratatosksson@quomation.com")
+				element.send_keys("jwilcox")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("Odinsson10")
+				element.send_keys("jw")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -340,13 +412,21 @@ loop do
 		}
 			uppnlclnt.click
 
-		driver10.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote10}"
+		driver10.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote10}"
+
+		if 
+			privacy = wait.until {
+				element = driver.find_element(:id, 'btnPrivacyOK')
+				element if element.displayed?
+			}
+				privacy.click
+		end
 
 		load = wait.until {
-			element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbCoAppRelation')
+			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			element.send_keys(:control, '7')
+			load.send_keys(:control, '6')
 	
 	break if i==0
 end

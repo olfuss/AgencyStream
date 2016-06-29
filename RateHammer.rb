@@ -4,17 +4,16 @@ require 'selenium-webdriver'
 wait = Selenium::WebDriver::Wait.new(:timeout => 30)
 
 quote1 = 1061943424
-quote2 = 1248091520
-quote3 = 790520320
+quote2 = 420524954
+quote3 = 901695744
 quote4 = 390242816
-quote5 = 1079073792
+quote5 = 1130485888
 quote6 = 1168224512
 quote7 = 1002762048
 quote8 = 1058327424
 quote9 = 1551535872
 quote10 = 977019776
 
-#Driver 1
 
 i=1
 loop do 
@@ -218,7 +217,7 @@ loop do
 		}
 			element.send_keys(:control, '7')
 			
-		driver = Selenium::WebDriver.for :firefox
+		driver7 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 7 #{i} Started")
 		driver7.navigate.to "https://test.quomation.com/login.aspx"
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')

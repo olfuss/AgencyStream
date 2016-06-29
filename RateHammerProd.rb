@@ -221,7 +221,11 @@ loop do
 			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
+<<<<<<< HEAD
 			load.send_keys(:control, '6')
+=======
+			element.send_keys(:control, '6')
+>>>>>>> Olfuss
 			
 		driver6 = Selenium::WebDriver.for :firefox
 		print("Iteration #{i} Started")
@@ -262,7 +266,11 @@ loop do
 			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
+<<<<<<< HEAD
 			load.send_keys(:control, '6')
+=======
+			element.send_keys(:control, '6')
+>>>>>>> Olfuss
 			
 		driver7 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 7 #{i} Started")
@@ -303,7 +311,11 @@ loop do
 			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
+<<<<<<< HEAD
 			load.send_keys(:control, '6')
+=======
+			element.send_keys(:control, '6')
+>>>>>>> Olfuss
 	
 		driver8 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 8 #{i} Started")
@@ -344,7 +356,11 @@ loop do
 			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
+<<<<<<< HEAD
 			load.send_keys(:control, '6')
+=======
+			element.send_keys(:control, '6')
+>>>>>>> Olfuss
 	
 		driver9 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 9 #{i} Started")
@@ -385,7 +401,11 @@ loop do
 			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
+<<<<<<< HEAD
 			load.send_keys(:control, '6')
+=======
+			element.send_keys(:control, '6')
+>>>>>>> Olfuss
 
 		driver10 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 10 #{i} Started")
@@ -426,7 +446,11 @@ loop do
 			element = driver.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
+<<<<<<< HEAD
 			load.send_keys(:control, '6')
+=======
+			element.send_keys(:control, '6')
+>>>>>>> Olfuss
 	
 	break if i==0
 end

@@ -17,7 +17,9 @@ quote10 = 977019776
 i=1
 loop do 
 	i+=1
-		
+
+#Driver
+
 		driver = Selenium::WebDriver.for :firefox
 		print("Iteration #{i} Started")
 		driver.navigate.to "https://www.agencystream.com/Login.aspx"
@@ -59,6 +61,8 @@ loop do
 		}
 			load.send_keys(:control, '6')
 
+#Driver 2
+
 		driver2 = Selenium::WebDriver.for :firefox
 		print("Iteration driver2 #{i} Started")
 		driver2.navigate.to "https://www.agencystream.com/Login.aspx"
@@ -88,17 +92,19 @@ loop do
 
 		if 
 			privacy = wait.until {
-				element = driver.find_element(:id, 'btnPrivacyOK')
+				element = driver2.find_element(:id, 'btnPrivacyOK')
 				element if element.displayed?
 			}
 				privacy.click
 		end
 
-		load = wait.until {
-			element = driver.find_element(:id, 'tQuote')
+		load2 = wait.until {
+			element = driver2.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			load.send_keys(:control, '6')
+			load2.send_keys(:control, '6')
+		
+#Driver 3
 			
 		driver3 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 3 #{i} Started")
@@ -129,18 +135,20 @@ loop do
 
 		if 
 			privacy = wait.until {
-				element = driver.find_element(:id, 'btnPrivacyOK')
+				element = driver3.find_element(:id, 'btnPrivacyOK')
 				element if element.displayed?
 			}
 				privacy.click
 		end
 
 		load = wait.until {
-			element = driver.find_element(:id, 'tQuote')
+			element = driver3.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
 			load.send_keys(:control, '6')
-			
+		
+#Driver 4
+
 		driver4 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 4 #{i} Started")
 		driver4.navigate.to "https://www.agencystream.com/Login.aspx"
@@ -170,18 +178,20 @@ loop do
 
 		if 
 			privacy = wait.until {
-				element = driver.find_element(:id, 'btnPrivacyOK')
+				element = driver4.find_element(:id, 'btnPrivacyOK')
 				element if element.displayed?
 			}
 				privacy.click
 		end
 
 		load = wait.until {
-			element = driver.find_element(:id, 'tQuote')
+			element = driver4.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
 			load.send_keys(:control, '6')
-				
+
+#Driver 5
+
 		driver5 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 5 #{i} Started")
 		driver5.navigate.to "https://www.agencystream.com/Login.aspx"
@@ -211,22 +221,20 @@ loop do
 
 		if 
 			privacy = wait.until {
-				element = driver.find_element(:id, 'btnPrivacyOK')
+				element = driver5.find_element(:id, 'btnPrivacyOK')
 				element if element.displayed?
 			}
 				privacy.click
 		end
 
 		load = wait.until {
-			element = driver.find_element(:id, 'tQuote')
+			element = driver5.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-<<<<<<< HEAD
 			load.send_keys(:control, '6')
-=======
-			element.send_keys(:control, '6')
->>>>>>> Olfuss
-			
+
+#Driver 6
+
 		driver6 = Selenium::WebDriver.for :firefox
 		print("Iteration #{i} Started")
 		driver6.navigate.to "https://www.agencystream.com/Login.aspx"
@@ -256,21 +264,20 @@ loop do
 
 		if 
 			privacy = wait.until {
-				element = driver.find_element(:id, 'btnPrivacyOK')
+				element = driver6.find_element(:id, 'btnPrivacyOK')
 				element if element.displayed?
 			}
 				privacy.click
 		end
 
 		load = wait.until {
-			element = driver.find_element(:id, 'tQuote')
+			element = driver6.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-<<<<<<< HEAD
+
 			load.send_keys(:control, '6')
-=======
-			element.send_keys(:control, '6')
->>>>>>> Olfuss
+
+#Driver 7
 			
 		driver7 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 7 #{i} Started")
@@ -301,21 +308,19 @@ loop do
 
 		if 
 			privacy = wait.until {
-				element = driver.find_element(:id, 'btnPrivacyOK')
+				element = driver7.find_element(:id, 'btnPrivacyOK')
 				element if element.displayed?
 			}
 				privacy.click
 		end
 
 		load = wait.until {
-			element = driver.find_element(:id, 'tQuote')
+			element = driver7.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-<<<<<<< HEAD
 			load.send_keys(:control, '6')
-=======
-			element.send_keys(:control, '6')
->>>>>>> Olfuss
+
+#Driver 8
 	
 		driver8 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 8 #{i} Started")
@@ -346,21 +351,19 @@ loop do
 
 		if 
 			privacy = wait.until {
-				element = driver.find_element(:id, 'btnPrivacyOK')
+				element = driver8.find_element(:id, 'btnPrivacyOK')
 				element if element.displayed?
 			}
 				privacy.click
 		end
 
 		load = wait.until {
-			element = driver.find_element(:id, 'tQuote')
+			element = driver8.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-<<<<<<< HEAD
 			load.send_keys(:control, '6')
-=======
-			element.send_keys(:control, '6')
->>>>>>> Olfuss
+
+#Driver 9
 	
 		driver9 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 9 #{i} Started")
@@ -391,21 +394,19 @@ loop do
 
 		if 
 			privacy = wait.until {
-				element = driver.find_element(:id, 'btnPrivacyOK')
+				element = driver9.find_element(:id, 'btnPrivacyOK')
 				element if element.displayed?
 			}
 				privacy.click
 		end
 
 		load = wait.until {
-			element = driver.find_element(:id, 'tQuote')
+			element = driver9.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-<<<<<<< HEAD
 			load.send_keys(:control, '6')
-=======
-			element.send_keys(:control, '6')
->>>>>>> Olfuss
+
+#Driver 10
 
 		driver10 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 10 #{i} Started")
@@ -436,21 +437,17 @@ loop do
 
 		if 
 			privacy = wait.until {
-				element = driver.find_element(:id, 'btnPrivacyOK')
+				element = driver10.find_element(:id, 'btnPrivacyOK')
 				element if element.displayed?
 			}
 				privacy.click
 		end
 
 		load = wait.until {
-			element = driver.find_element(:id, 'tQuote')
+			element = driver10.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-<<<<<<< HEAD
 			load.send_keys(:control, '6')
-=======
-			element.send_keys(:control, '6')
->>>>>>> Olfuss
 	
 	break if i==0
 end

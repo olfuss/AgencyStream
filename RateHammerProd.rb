@@ -26,9 +26,9 @@ loop do
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -61,7 +61,14 @@ loop do
 		}
 			load.send_keys(:control, '6')
 
+		break if i==0
+	end
+
 #Driver 2
+
+i=1
+loop do 
+	i+=1
 
 		driver2 = Selenium::WebDriver.for :firefox
 		print("Iteration driver2 #{i} Started")
@@ -69,9 +76,9 @@ loop do
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -98,13 +105,20 @@ loop do
 				privacy.click
 		end
 
-		load2 = wait.until {
+		load = wait.until {
 			element = driver2.find_element(:id, 'tQuote')
 			element if element.displayed?
 		}
-			load2.send_keys(:control, '6')
+			load.send_keys(:control, '6')
+		
+		break if i==0
+	end
 		
 #Driver 3
+
+i=1
+loop do 
+	i+=1
 			
 		driver3 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 3 #{i} Started")
@@ -112,9 +126,9 @@ loop do
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -147,7 +161,14 @@ loop do
 		}
 			load.send_keys(:control, '6')
 		
+		break if i==0
+	end
+
 #Driver 4
+
+i=1
+loop do 
+	i+=1
 
 		driver4 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 4 #{i} Started")
@@ -155,9 +176,9 @@ loop do
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -190,7 +211,14 @@ loop do
 		}
 			load.send_keys(:control, '6')
 
+		break if i==0
+	end
+
 #Driver 5
+
+i=1
+loop do 
+	i+=1
 
 		driver5 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 5 #{i} Started")
@@ -198,9 +226,9 @@ loop do
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -233,7 +261,14 @@ loop do
 		}
 			load.send_keys(:control, '6')
 
+		break if i==0
+	end
+
 #Driver 6
+
+i=1
+loop do 
+	i+=1
 
 		driver6 = Selenium::WebDriver.for :firefox
 		print("Iteration #{i} Started")
@@ -241,9 +276,9 @@ loop do
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -276,18 +311,25 @@ loop do
 		}
 
 			load.send_keys(:control, '6')
+		
+		break if i==0
+	end
 
 #Driver 7
 			
+i=1
+loop do 
+	i+=1
+
 		driver7 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 7 #{i} Started")
 		driver7.navigate.to "https://www.agencystream.com/Login.aspx"
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -319,8 +361,15 @@ loop do
 			element if element.displayed?
 		}
 			load.send_keys(:control, '6')
+		
+		break if i==0
+	end
 
 #Driver 8
+
+i=1
+loop do 
+	i+=1
 	
 		driver8 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 8 #{i} Started")
@@ -328,9 +377,9 @@ loop do
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -362,8 +411,15 @@ loop do
 			element if element.displayed?
 		}
 			load.send_keys(:control, '6')
+		
+		break if i==0
+	end
 
 #Driver 9
+
+i=1
+loop do 
+	i+=1
 	
 		driver9 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 9 #{i} Started")
@@ -371,9 +427,9 @@ loop do
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {
@@ -405,8 +461,15 @@ loop do
 			element if element.displayed?
 		}
 			load.send_keys(:control, '6')
+		
+		break if i==0
+	end
 
 #Driver 10
+
+i=1
+loop do 
+	i+=1
 
 		driver10 = Selenium::WebDriver.for :firefox
 		print("Iteration driver 10 #{i} Started")
@@ -414,9 +477,9 @@ loop do
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 				element.send_keys("65789")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
+				element.send_keys("olfuss.ratatosksson@quomation.com")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+				element.send_keys("Odinsson10")
 		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 		quoteid = wait.until {

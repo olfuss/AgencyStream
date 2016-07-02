@@ -126,20 +126,6 @@ vin = wait.until {
 }
 	vin.send_keys("PKW60012938")
 
-#Add code to validate the locked field entries for AGENCY/COMPANY ISSUING CARD
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtAgencyName')
-#    driver.verify? text = "Quomation Insutance Services"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtAgencyAddress1')
-#    driver.verify? text = "7400 Union Park Ave #101"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtAgencyAddress2')
-#    driver.verify? text = ""
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtAgencyCity')
-#    driver.verify? text = "Midvale"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$txtAgencyState')
-#    driver.verify? text = "UT"
-#element = driver.find_element(:id, 'ctl00$ContentPlaceHolder1$mskAgencyZip')
-#    driver.verify? text = "84047" 
-
 name = wait.until {
 	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredName')
 	element if element.displayed?
@@ -173,14 +159,9 @@ zip = wait.until {
 
 # Currently verifies buttons exist but we need to add code to push a print to .pdf and send an email.
 # Need to scroll down to test bottom buttons.
-
- #element = dirver4.find_element(:xpath, "xpath of nearby visible element")
-  #element.location_once_scrolled_into_view
-  #my_element = driver.find_element(:xpath, "xpath of your element")
-  #my_element.click
-
-element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').last.location_once_scrolled_into_view
-element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
+  element.send_keys(:tab)
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint')
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail')
 
 # All form fields of the ID card are tested.
 
@@ -209,4 +190,11 @@ pwrforms = wait.until {
 
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragPowerForms')
 element = driver4.find_element(:id, 'ctl00$ContentPlaceHolderSidebar$btnBinder').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').click
+element.send_keys "01/01/1664"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3')
+assert driver.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').text.include?(Quomation Insurance Services)
+
+
+
 

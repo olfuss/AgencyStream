@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'selenium-webdriver'
-
+=begin
 driver = Selenium::WebDriver.for :firefox
 	driver.navigate.to "https://test.quomation.com/login.aspx"
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
@@ -74,9 +74,6 @@ input = wait.until {
 	element if element.displayed?
 }
 	input.send_keys("PolicyNumberKeySent")
-
-# Test Effective Date and Expiration Date fields, however this needs to be fixed to test the dropdown feature selections as well.
-# Currently we are just sending a key value which is good, but we need to test both.
 
 effdate = wait.until {
 	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskEffectiveDate')
@@ -156,17 +153,22 @@ zip = wait.until {
 }
 	zip.send_keys("84070")
 
-
-# Currently verifies buttons exist but we need to add code to push a print to .pdf and send an email.
-# Need to scroll down to test bottom buttons.
   element.send_keys(:tab)
-  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint')
-  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail')
 
-# All form fields of the ID card are tested.
+  print = wait.until {
+  	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint')
+  	element if element.displayed?
+  }
+  	print.click
 
+  email = wait.until {
+  	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail')
+  	element if element.displayed?
+  }
+  	email.click
+  	
 driver3.quit();
-
+=end
 # Test the Insurance Binder form
 
 driver4 = Selenium::WebDriver.for :firefox
@@ -189,11 +191,28 @@ pwrforms = wait.until {
 	pwrforms.click
 
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragPowerForms')
-element = driver4.find_element(:id, 'ctl00$ContentPlaceHolderSidebar$btnBinder').click
+
+binder = wait.until {
+	element = driver4.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnBinder')
+	element if element.displayed?
+}
+	binder.click
+driver4.quit();
+
+driver4 = Selenium::WebDriver.for :firefox
+driver4.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
+			element.send_keys "65789"
+		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
+			element.send_keys "jwilcox"
+		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
+			element.send_keys "jw"
+		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').click
-element.send_keys "01/01/1664"
+		#element.send_keys "01011664"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3')
-assert driver.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').text.include?(Quomation Insurance Services)
+assert driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').text.include?("Quomation Insurance Services")
 
 
 

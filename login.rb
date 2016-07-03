@@ -209,11 +209,13 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 			element.send_keys "jw"
 		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').click
-		#element.send_keys "01011664"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate')
+		element.send_keys "07042016"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3')
-assert driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').text.include?("Quomation Insurance Services")
-
-
+driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').click
+driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerName').click
+driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress1').click
+driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress2').click
+driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerCity').click
 
 

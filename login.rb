@@ -211,11 +211,42 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
 
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate')
 		element.send_keys "07042016"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3')
-driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').click
-driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerName').click
-driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress1').click
-driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress2').click
-driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerCity').click
-
-
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').clear
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').send_keys "Sent"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerName').clear
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerName').send_keys "Sent"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress1').clear
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress1').send_keys "Sent"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress2').clear
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress2').send_keys "Sent"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerCity').clear
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerCity').send_keys "Sent"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerState').clear
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerState').send_keys "RS"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerZip').clear
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerZip').send_keys "80302"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerPhone').clear
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerPhone').send_keys "8018888888"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerFax').clear
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerFax').send_keys "8017777777"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtproducerCode').send_keys "99999"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerSubCode').send_keys "99999"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyCustID').send_keys "ACustIDSent"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompany').send_keys "CoSent"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtBinder').send_keys "BinderSent"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskEffectiveDate').send_keys "07042016"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskEffectiveTime').send_keys "5"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAMEffective').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPMEffective').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCheckBinder').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskExpirationDate').send_keys "07042017"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAMExpiration').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkNoonExpiration').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtBinderPolicyNo').send_keys "BinderPolNumber"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredName').send_keys "InsdName"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress1').send_keys "InsdAdd1"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress2').send_keys "InsdAdd2"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredCity').send_keys "InsdCity"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredState').send_keys "RS"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredZip').send_keys "99999"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtDescripBig1').send_keys "Lots of shit can go in this box. But I dont have time to fill it"

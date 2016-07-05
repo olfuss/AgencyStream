@@ -350,17 +350,28 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInte
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestCity').send_keys "AdditionalCity"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestState').send_keys "RS"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestZip').send_keys "12345"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditiionalInterestPhone1').click
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditiionalInterestPhone1').send_keys "1234567789"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestPhone2').click
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestPhone2').send_keys "1234568899"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditiionalInterestPhone1')
+	element.send_keys(:arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left,
+			:arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left)
+		element.send_keys "801111111"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestPhone2')
+	element.send_keys(:arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left,
+			:arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left)
+		element.send_keys "8012222222"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkMortgagee').click
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAdditional').click
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkLossPayee').click
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOther1').click
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOther').send_keys "Last Call Other"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoanNumber').send_keys "123456LoanNumber"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint')
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail')
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoanNumber').send_keys(:tab)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
+driver4.quit();
 
 #Done with Binder
+
+driver5 = Selenium::WebDriver.for :firefox
+driver5.navigate.to "https://test.quomation.com/login.aspx"
+
+

@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'selenium-webdriver'
-
+=begin
 driver = Selenium::WebDriver.for :firefox
 	driver.navigate.to "https://test.quomation.com/login.aspx"
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
@@ -368,10 +368,14 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoanNumber').s
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
 driver4.quit();
-
+=end
 #Done with Binder
 
 driver5 = Selenium::WebDriver.for :firefox
 driver5.navigate.to "https://test.quomation.com/login.aspx"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 
 

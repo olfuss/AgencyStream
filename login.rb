@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'selenium-webdriver'
-=begin
+
 driver = Selenium::WebDriver.for :firefox
 	driver.navigate.to "https://test.quomation.com/login.aspx"
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
@@ -168,7 +168,7 @@ zip = wait.until {
   	email.click
   	
 driver3.quit();
-=end
+
 # Test the Insurance Binder form
 
 driver4 = Selenium::WebDriver.for :firefox
@@ -249,4 +249,118 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredCity').send_keys "InsdCity"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredState').send_keys "RS"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredZip').send_keys "99999"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtDescripBig1').send_keys "Lots of shit can go in this box. But I dont have time to fill it"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtDescripBig1').send_keys "Lots of shit can go in this box. But I don't have time to fill it"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPropBasic').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPropOther1').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPropOther2').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPropBroad').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPropSpec').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropOther1').send_keys "Other"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropOther2').send_keys "Other"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPCoverageBig1').send_keys "Another box filled"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropDeduct1').send_keys "Deduct1"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropDeduct2').send_keys "Deduct2"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropDeduct3').send_keys "Deduct3"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropDeduct4').send_keys "Deduct4"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropCoLns1').send_keys "PropCol1"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropCoLns2').send_keys "PropCol2"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropCoLns3').send_keys "PropCol3"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropCoLns4').send_keys "PropCol4"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropAmount1').send_keys "PropAmt1"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropAmount2').send_keys "PropAmt2"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropAmount3').send_keys "PropAmt3"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropAmount4').send_keys "PropAmt4"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGLCGL').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGLCM1').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGLCM2').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGLOther1').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGLOther2').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGLOther3').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGLOccur').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtGLOther1').send_keys "GLOther1"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtGLOther2').send_keys "GLOther2"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtGLOther3').send_keys "GLOther3"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCGLCoverageBig1').send_keys "Filled yet another box"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskGLRetroDate').send_keys "07041964"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOccurrence').send_keys "100.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtDamageRent').send_keys "200.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtMedExp').send_keys "300.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPAI').send_keys "400.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtGenAgg').send_keys "500.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtproductsAGG').send_keys "600.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkALAnyAuto').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkALOwnedAuto').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkALSchAuto').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkALHiredAuto').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkALNonOwnAuto').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkALOther1').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkALOther2').send_keys(:space)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtALOther1').send_keys "AllOther1"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtALOther2').send_keys "AllOther2"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtALCoverageBig1').send_keys "Holy shit fucks! Another box filled"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCSL').send_keys "125.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtBIPP').send_keys "225.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtBIPA').send_keys "325.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPD').send_keys "425.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtMedical').send_keys "525.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPIP').send_keys "625.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtUM').send_keys "725.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAutoOther').send_keys "825.00"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAutoOther').send_keys(:tab,:tab,:tab,:tab,:tab,:tab)
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAutoPDColl').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAutoPDOTC').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAutoPDDeduct1').send_keys "PDDeduct1"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAutoPDDeuct2').send_keys "PDDeduct2"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAutoPDAV').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAutoPDSV').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAutoPDCoverage1').send_keys "Yay! Sent bitch"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAutoPDACV').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAutoPDSA').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAutoPDOther').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtStatedAmount').send_keys "1245.66"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGarageAuto').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGarageOther1').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkGarageOther2').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtGarageOther1').send_keys "GarageOther1"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtGarageOther2').send_keys "GarageOther2"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtGarageCoverageBig1').send_keys "BOXBOXBOXBOXBOXBOXBOXBOXBOXBOXBOXBOXBOXBOXBOXBOX"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtEAAccident').send_keys "222.22"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherAutoOnly').send_keys "333.22"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherEAAccident').send_keys "444.22"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAccidentAggregate').send_keys "555.22"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkExcessUmbrella').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkExcessOther').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtExcessCov1').send_keys "Small box more fun?"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskExcessRetro').send_keys "07041944"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtEachOccurrence').send_keys "123.45"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAggregate').send_keys "223.45"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSelfInsured').send_keys "323.45"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtWCELBig1').send_keys "Jasmine's pooping again. WTF?!"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkWCSL').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtELAccident').send_keys "635.44"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtELDiseaseEA').send_keys "464.84"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtELPolicy').send_keys "4654.4654"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSpecialBig').send_keys "More text put in another box with numbers now 11648646132168496854"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtFees').send_keys "5265"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtTaxes').send_keys "2165.22"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtTotalPremium').send_keys "846.15"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestName').send_keys "Additional Name"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestAddress1').send_keys "Additional Address"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestAddress2').send_keys "Additional Address 2"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestCity').send_keys "AdditionalCity"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestState').send_keys "RS"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestZip').send_keys "12345"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditiionalInterestPhone1').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditiionalInterestPhone1').send_keys "1234567789"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestPhone2').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestPhone2').send_keys "1234568899"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkMortgagee').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAdditional').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkLossPayee').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOther1').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOther').send_keys "Last Call Other"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoanNumber').send_keys "123456LoanNumber"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint')
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail')
+
+#Done with Binder

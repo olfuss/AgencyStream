@@ -166,9 +166,14 @@ zip = wait.until {
   	element if element.displayed?
   }
   	email.click
-  	
-driver3.quit();
 
+element = driver3.find_element(:id, 'ctl00_imgTopLogo').click
+	driver3.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
+element = driver3.find_element(:id, 'home_icon').click
+	driver3.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
+element = driver3.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
+driver3.quit();
+  	
 # Test the Insurance Binder form
 
 driver4 = Selenium::WebDriver.for :firefox
@@ -367,6 +372,12 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoanNumber').s
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoanNumber').send_keys(:tab)
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
+
+element = driver4.find_element(:id, 'ctl00_imgTopLogo').click
+driver4.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
+element = driver4.find_element(:id, 'home_icon').click
+driver4.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
+element = driver4.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver4.quit();
 
 #Done with Binder
@@ -552,3 +563,113 @@ element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim9').send_ke
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim10').send_keys "5.56"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim11').send_keys "300"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim12').send_keys "39"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr19').send_keys "B"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr20').send_keys "C"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_chkUmbrella').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_chkExcess').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_chkDeduct').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_chkReten').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOccur2').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_chkClaimsMade2').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtRetention').send_keys "125.45"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd18').send_keys "AI18"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd19').send_keys "AI19"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd20').send_keys "AI20"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv18').send_keys "S"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv19').send_keys "S"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv20').send_keys "S"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum18').send_keys "PolNum18"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate18').send_keys "07052016"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate18').send_keys "07052017"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgg1').send_keys "TextAgg 1"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim18').send_keys "18"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim19').send_keys "19"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim20').send_keys "20"
+#Fields Locked.
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum19').send_keys "PolNum19"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate19').send_keys "07052016"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate19').send_keys "07052017"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum20').send_keys "PolNum20"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate20').send_keys "07052016"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate20').send_keys "07052017"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_CheckBox1').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_CheckBox2').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim23').send_keys "195.25"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim24').send_keys "643.49"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim25').send_keys "563.84"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtWorkersComp').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAnyProp').send_keys "B"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSpecPro').send_keys "C"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAnyPropYN').send_keys "Y"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAnyPropYN').send_keys "N"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv23').send_keys "S"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv24').send_keys "S"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv25').send_keys "S"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum23').send_keys "PolNum 23"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate23').send_keys "07062016"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate23').send_keys "07062017"
+#Fields Locked
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum24').send_keys "PolNum 23"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate24').send_keys "07062016"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate24').send_keys "07062017"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum25').send_keys "PolNum 23"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate25').send_keys "07062016"
+#element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate25').send_keys "07062017"
+
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr26').send_keys"A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr27').send_keys"B"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr28').send_keys"C"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOther1').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOther2').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOther3').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank1').send_keys "Blank 1"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank3').send_keys "Blank 3"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank5').send_keys "Blank 5"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd26').send_keys "A"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd27').send_keys "B"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd28').send_keys "C"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv26').send_keys "S"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv27').send_keys "S"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv28').send_keys "S"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum26').send_keys "PolNum 26"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum27').send_keys "PolNum 27"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum28').send_keys "PolNum 28"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate26').send_keys "07062016"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate27').send_keys "07062016"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate28').send_keys "07062016"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate26').send_keys "07062017"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate27').send_keys "07062017"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate28').send_keys "07062017"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank2').send_keys "Blank 2"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank4').send_keys "Blank 4"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank6').send_keys "Blank 6"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim26').send_keys "101"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim27').send_keys "102"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim28').send_keys "103"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtDescripSpecial').send_keys "Text for the texts boxioucious"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredNameC').send_keys "InsdName C"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress1C').send_keys "InsdAdd 1C"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress2C').send_keys "InsdAdd 2C"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCertHolderAdd3').send_keys "HolderAdd 3"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCertHolderAdd4').send_keys "HolderAdd 4"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCertificateFax').send_keys "CertiFax"
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
+element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
+
+element = driver5.find_element(:id, 'ctl00_imgTopLogo').click
+driver5.navigate.to "https://test.quomation.com/PowerForms/CertOfLiability.aspx?id=-1"
+element = driver5.find_element(:id, 'home_icon').click
+driver5.navigate.to "https://test.quomation.com/PowerForms/CertOfLiability.aspx?id=-1"
+element = driver5.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
+driver5.quit();
+
+#Liability Form Done
+

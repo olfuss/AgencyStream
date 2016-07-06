@@ -599,3 +599,52 @@ element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLocCity').send
 element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLocState').send_keys "RS"
 element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_mskLocZip').send_keys "12345"
 element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPropMisc').send_keys "Prop Miscellany for miscellaneous details or whatever"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage1').send_keys "Coverage 1"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount1').send_keys "111.11"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible1').send_keys "Deduct1"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage2').send_keys "Coverage 2"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount2').send_keys "222.22"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible2').send_keys "Deduct2"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage3').send_keys "Coverage 3"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount3').send_keys "333.33"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible3').send_keys "Deduct3"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage4').send_keys "Coverage 4"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount4').send_keys "444.44"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible4').send_keys "Deduct4"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage5').send_keys "Coverage 5"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount5').send_keys "555.55"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible5').send_keys "Deduct5"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage6').send_keys "Coverage 6"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount6').send_keys "666.66"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible6').send_keys "Deduct6"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage7').send_keys "Coverage 7"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount7').send_keys "777.77"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible7').send_keys "Deduct 7"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage8').send_keys "Coverage 8"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount8').send_keys "888.88"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible8').send_keys "Deduct8"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtRemarks').send_keys "Fill a box with textFill a box with textFill a box with text
+Fill a box with textFill a box with textFill a box with textFill a box with textFill a box with textFill a box with textFill a box with text"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestName').send_keys "Interest Name"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestAddress1').send_keys "AddIntAdd1"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestAddress2').send_keys "AddIntAdd2"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestCity').send_keys "AddIntCity"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAdditionalInterestState').send_keys "RS"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestZip').send_keys "78945"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestPhone1')
+element.send_keys(:arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left,
+		:arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left)
+			element.send_keys "8018888888"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_mskAdditionalInterestPhone2')
+element.send_keys(:arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left,
+		:arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left)
+			element.send_keys "8018888889"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_chkMortgagee').click
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_chkAddInsured').click
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_chkLossPayee').click
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOther1').click
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOther').send_keys "OtherText"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoanNumber2').send_keys "LoanNumber 2"
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
+element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
+driver6.quit();

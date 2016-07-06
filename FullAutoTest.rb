@@ -77,42 +77,29 @@ driver4 = Selenium::WebDriver.for :firefox
 wait = Selenium::WebDriver::Wait.new(:timeout => 15)
 
 driver4.navigate.to "https://test.quomation.com/login.aspx"
-
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-			element.send_keys "65789"
-		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-			element.send_keys "jwilcox"
-		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-			element.send_keys "jw"
-		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 pwrforms = wait.until {
 	element = driver4.find_element(:id, 'btnPowerForms_text')
 	element if element.displayed?
 }
 	pwrforms.click
-
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragPowerForms')
-
 binder = wait.until {
 	element = driver4.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnBinder')
 	element if element.displayed?
 }
 	binder.click
 driver4.quit();
-
 driver4 = Selenium::WebDriver.for :firefox
 driver4.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-			element.send_keys "65789"
-		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-			element.send_keys "jwilcox"
-		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-			element.send_keys "jw"
-		element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate')
-		element.send_keys "07042016"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').send_keys "07042016"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').clear
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').send_keys "Sent"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerName').clear

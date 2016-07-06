@@ -647,4 +647,9 @@ element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOther').send_k
 element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoanNumber2').send_keys "LoanNumber 2"
 element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
 element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
+element = driver6.find_element(:id, 'ctl00_imgTopLogo').click
+driver6.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
+element = driver6.find_element(:id, 'home_icon').click
+driver6.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
+element = driver6.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver6.quit();

@@ -3,12 +3,9 @@ require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :firefox
 	driver.navigate.to "https://test.quomation.com/login.aspx"
-		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-			element.send_keys "65789"
-		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-			element.send_keys "jwilcox"
-		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-			element.send_keys "jw"
+		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
 		element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 		element = driver.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 	driver.quit();
@@ -17,12 +14,9 @@ driver = Selenium::WebDriver.for :firefox
 
 driver2 = Selenium::WebDriver.for :firefox
 	driver2.navigate.to "https://test.quomation.com/login.aspx"
-		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-			element.send_keys "65789"
-		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-			element.send_keys "jwilcox"
-		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-			element.send_keys "jw"
+		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
 		element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 		element = driver2.find_element(:id, 'btnPowerForms_text').click
 		sleep(5)
@@ -32,15 +26,10 @@ driver2 = Selenium::WebDriver.for :firefox
 
 driver3 = Selenium::WebDriver.for :firefox
 	driver3.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
-		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-			element.send_keys "65789"
-		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-			element.send_keys "jwilcox"
-		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-			element.send_keys "jw"
+		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
 		element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-
-#This code has to be a little more robust to handle inputting into the fields on forms.	
 
 wait = Selenium::WebDriver::Wait.new(:timeout => 15)
 	
@@ -50,127 +39,35 @@ input = wait.until {
 }
 	input.send_keys("RS")
 
-input = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompanyNumber')
-	element if element.displayed?
-}
-	input.send_keys("CompanySendKeySent")
-
-input = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompany')
-	element if element.displayed?
-}
-	input.send_keys("TestCompanySent")
-
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompanyNumber').send_keys "CompanySendKeySent"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompany').send_keys "TestCompanySent"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_chkCommercial').click
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_chkPersonal').click
-
-input = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNumber')
-	element if element.displayed?
-}
-	input.send_keys("PolicyNumberKeySent")
-
-effdate = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskEffectiveDate')
-	element if element.displayed?
-}
-	effdate.click
-
-effdate = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_CalendarExtenderEffDate_today')
-	element if element.displayed?
-}
-	effdate.click
-
-expdate = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskExpirationDate')
-	element if element.displayed?
-}
-	expdate.click
-
-expdate = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_CalendarExtenderExpDate_today')
-	element if element.displayed?
-}
-	expdate.click
-
-year = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtYear')
-	element if element.displayed?
-}
-	year.send_keys("1944")
-
-make = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtMake')
-	element if element.displayed?
-}
-	make.send_keys("Panzer")
-
-model = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtModel')
-	element if element.displayed?
-}
-	model.send_keys("Panzerkampfwagen IV")
-
-vin = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtVIN')
-	element if element.displayed?
-}
-	vin.send_keys("PKW60012938")
-
-name = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredName')
-	element if element.displayed?
-}
-	name.send_keys("Vladimir Putin")
-
-address = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress')
-	element if element.displayed?
-}
-	address.send_keys("Somewhere in Russia in Russian House #{1}")
-
-city = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredCity')
-	element if element.displayed?
-}
-	city.send_keys("Ovechkination")
-
-state = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredState')
-	element if element.displayed?
-}
-	state.send_keys("UT")
-
-zip = wait.until {
-	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskInsuredZip')
-	element if element.displayed?
-}
-	zip.send_keys("84070")
-
-  element.send_keys(:tab)
-
-  print = wait.until {
-  	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint')
-  	element if element.displayed?
-  }
-  	print.click
-
-  email = wait.until {
-  	element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail')
-  	element if element.displayed?
-  }
-  	email.click
-
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNumber').send_keys "PolicyNumberKeySent"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskEffectiveDate').click
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_CalendarExtenderEffDate_today').click
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskExpirationDate').click
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_CalendarExtenderExpDate_today').click
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtYear').send_keys "1944"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtMake').send_keys "Panzer"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtModel').send_keys "Panzerkampfwagen IV"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtVIN').send_keys "PKW60012938"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredName').send_keys "Vladimir Putin"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress').send_keys "Somewhere in Russia in Russian House"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredCity').send_keys "Ovechkination"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredState').send_keys "UT"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskInsuredZip').send_keys "84070"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskInsuredZip').send_keys(:tab)
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
 element = driver3.find_element(:id, 'ctl00_imgTopLogo').click
-	driver3.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
+driver3.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
 element = driver3.find_element(:id, 'home_icon').click
-	driver3.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
+driver3.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
 element = driver3.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver3.quit();
   	

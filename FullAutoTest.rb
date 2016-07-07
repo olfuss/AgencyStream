@@ -83,7 +83,6 @@ pwrforms = wait.until {
 	element if element.displayed?
 }
 	pwrforms.click
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragPowerForms')
 binder = wait.until {
 	element = driver4.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnBinder')
 	element if element.displayed?
@@ -536,7 +535,7 @@ element = driver5.find_element(:id, 'home_icon').click
 driver5.navigate.to "https://test.quomation.com/PowerForms/CertOfLiability.aspx?id=-1"
 element = driver5.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver5.quit();
-=end
+
 #Liability Form Done
 driver6 = Selenium::WebDriver.for :firefox
 wait = Selenium::WebDriver::Wait.new(:timeout => 15)
@@ -648,8 +647,85 @@ element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoanNumber2').
 element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
 element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
 element = driver6.find_element(:id, 'ctl00_imgTopLogo').click
-driver6.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
+driver6.navigate.to "https://test.quomation.com/PowerFroms/Evidence.aspx?id=-1"
 element = driver6.find_element(:id, 'home_icon').click
 driver6.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
 element = driver6.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver6.quit();
+=end
+driver7 = Selenium::WebDriver.for :firefox
+wait = Selenium::WebDriver::Wait.new(:timeout => 15)
+driver7.navigate.to "https://test.quomation.com/login.aspx"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+pwrforms = wait.until {
+	element = driver7.find_element(:id, 'btnPowerForms_text')
+	element if element.displayed?
+}
+	pwrforms.click
+cancel = wait.until {
+	element = driver7.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnCancel')
+	element if element.displayed?
+}
+	cancel.click
+driver7.quit();
+driver7 = Selenium::WebDriver.for :firefox
+wait = Selenium::WebDriver::Wait.new(:timeout => 15)
+driver7.navigate.to "https://test.quomation.com/PowerForms/Cancellation.aspx?id=-1"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').send_keys "07062016"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerPhone').send_keys "8018888888"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_MaskedEditExtender1_ClientState').send_keys "RS"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerName').send_keys "Produce Name"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress1').send_keys "Producer Address 1"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerAddress2').send_keys "Producer Address 2"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerCity').send_keys "ProdCity"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerState').send_keys "RS"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerZip').send_keys "98765"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerCode').send_keys "ProdCode12345"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerSubCode').send_keys "ProdSubCode3456"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyCustID').send_keys "AgncyCustID"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredName').send_keys "InsdName"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress1').send_keys "InsdAdd 1"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredAddress2').send_keys "InsdAdd 2"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredCity').send_keys "InsdCity"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsuredState').send_keys "InsdCity"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskInsuredZip').send_keys "98765"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtNAIC').send_keys "NAICode"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompanyName').send_keys "Company Name"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompanyAddress1').send_keys "Company Add1"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompanyAddress2').send_keys "Company Add2"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompanyCity').send_keys "CompanyCity"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskCompanyState').send_keys "RS"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskCompanyZip').send_keys "98765"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyType').send_keys "PolType"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNumber').send_keys "PolNum"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskCancelDate').send_keys "07062016"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskCancelTime').send_keys "12"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskExpirationDate').send_keys "07062017"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskEffectiveDate').send_keys "07062015"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsured1').send_keys "Insd 1"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsured2').send_keys "Insd 2"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoan1').send_keys "Loan 1"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLoan2').send_keys "Loan 2"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherReason').send_keys "Other reason text fill here"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCompany').send_keys "Company"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNumber2').send_keys "PolNum 2"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskEffectiveDate2').send_keys "07062015"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtFTPremium').send_keys "FT Premium"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtFactor').send_keys "Factor"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtReturnPremium').send_keys "Return Prem"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtRemarks').send_keys "Remarks go here, lots of room"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProdName').send_keys "Prod Name"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProdAddress1').send_keys "Prod Add1"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProdAddress2').send_keys "Prod Add2"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProdCity').send_keys "ProdCity"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProdState').send_keys "RS"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProdZip').send_keys "98765"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtRQOther1').send_keys "RQ Other1"
+element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_txtRQOther2').send_keys "RQ Other2"

@@ -14,6 +14,7 @@ pwrforms = wait.until {
 	element if element.displayed?
 }
 	pwrforms.click
+sleep(2)
 binder = wait.until {
 	element = driver2.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnBinder')
 	element if element.displayed?

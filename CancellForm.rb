@@ -143,3 +143,5 @@ sleep(2)
 element = driver5.find_element(:id, 'ctl00_LoginView1_aLogout').click
 driver5.quit();
 puts "Cancellation Form Successfully Tested"
+
+

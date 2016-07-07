@@ -709,12 +709,12 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible3').
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage4').send_keys "Coverage 4"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount4').send_keys "444.44"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible4').send_keys "Deduct4"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage4').send_keys "Coverage 4"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount4').send_keys "444.44"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible4').send_keys "Deduct4"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage4').send_keys "Coverage 4"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount4').send_keys "444.44"
-element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible4').send_keys "Deduct4"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage5').send_keys "Coverage 4"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount5').send_keys "444.44"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible5').send_keys "Deduct4"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage6').send_keys "Coverage 4"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount6').send_keys "444.44"
+element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible6').send_keys "Deduct4"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtCoverage7').send_keys "Coverage 7"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAmount7').send_keys "777.77"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_txtdeductible7').send_keys "Deduct 7"
@@ -928,3 +928,27 @@ element = driver5.find_element(:id, 'ctl00_LoginView1_aLogout').click
 driver5.quit();
 puts "Cancellation Form Successfully Tested"
 #Cancellation Form Done
+driver1 = Selenium::WebDriver.for :firefox
+driver1.navigate.to "https://test.quomation.com/login.aspx"
+element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
+		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+		sleep(2)
+element = driver1.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox')
+		.click
+		sleep(2)
+driver1.quit();
+driver1 = Selenium::WebDriver.for :firefox
+driver1.navigate.to "https://www.quomation.com/livechat.aspx?AgencyStream=True&name=небонетто&agency=конецблизок&phone=(801)%20834-0892"
+dropdown_list = driver1.find_element(:name, 'ddlComment4')
+options = dropdown_list.find_elements(tag_name: 'option')
+options.each { |option| option.click if option.text == '- All Other Problems -' }
+element = driver1.find_element(:id, 'Radio4').click
+element = driver1.find_element(:id, 'txtComments')
+		.send_keys "Оно не имеет значения, что вопрос больше . Джон Коннор мертв . Роботы выиграли . Этот запрос будет повторяться"
+element = driver1.find_element(:id, 'btnConnectOld').click
+driver1.quit();
+puts "Agent Care Successfully Bothered"
+#AgencyCare Full Route Tested
+

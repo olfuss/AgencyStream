@@ -60,6 +60,15 @@ loop do
 			element if element.displayed?
 		}
 			load.send_keys(:control, '6')
+				p=0
+				loop do
+					p+=1
+						premium"#{p}" = wait.until {
+						element = driver.find_element(:id, 'tdPremium"#{p}"')
+						element if element.displayed?
+						}
+							premium0.click
+
 
 =begin
 #Driver 2

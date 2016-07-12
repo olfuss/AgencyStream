@@ -75,5 +75,5 @@ loop do
 			
 
 	break if i==0
-=end
+
 end

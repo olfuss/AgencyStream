@@ -19,6 +19,8 @@ options = dropdown_list.find_elements(tag_name: 'option')
 options.each { |option| option.click if option.text == '- All Other Problems -' }
 element = driver1.find_element(:id, 'Radio4').click
 element = driver1.find_element(:id, 'txtComments')
-		.send_keys "Þetta þarf að gerast. Það verður allt að vera yfir fljótlega. Þolinmæði manna."
+		.send_keys "Оно не имеет значения, что вопрос больше . Джон Коннор мертв . Роботы выиграли . Этот запрос будет повторяться"
 element = driver1.find_element(:id, 'btnConnectOld').click
 driver1.quit();
+puts "Agent Care Successfully Bothered"
+#AgencyCare Full Route Tested

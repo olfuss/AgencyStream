@@ -17,12 +17,13 @@ pwrforms = wait.until {
 sleep(2)
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnEvidence').click
 driver4.quit();
-driver4 = Selenium::WebDriver.for :firefox
+driver4 = Selenium::WebDriver.for :chrome
 driver4.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+driver4.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
 sleep(2)
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').send_keys "07042014"
 #Locked Fields
@@ -114,7 +115,7 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
 element = driver4.find_element(:id, 'ctl00_imgTopLogo').click
 driver4.quit();
-driver4 = Selenium::WebDriver.for :firefox
+driver4 = Selenium::WebDriver.for :chrome
 driver4.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -123,7 +124,7 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').
 sleep(2)
 element = driver4.find_element(:id, 'home_icon').click
 driver4.quit();
-driver4 = Selenium::WebDriver.for :firefox
+driver4 = Selenium::WebDriver.for :chrome
 driver4.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -132,7 +133,7 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').
 sleep(2)
 element = driver4.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver4.quit();
-driver4 = Selenium::WebDriver.for :firefox
+driver4 = Selenium::WebDriver.for :chrome
 driver4.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -141,7 +142,7 @@ element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').
 sleep(2)
 element = driver4.find_element(:id, 'ctl00_imgTopLogo').click
 driver4.quit();
-driver4 = Selenium::WebDriver.for :firefox
+driver4 = Selenium::WebDriver.for :chrome
 driver4.navigate.to "https://test.quomation.com/PowerForms/Evidence.aspx?id=-1"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -151,3 +152,4 @@ sleep(2)
 element = driver4.find_element(:id, 'ctl00_LoginView1_aLogout').click
 driver4.quit();
 puts "Evidence Form Successfully Tested"
+#Evidence Form Done

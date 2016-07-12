@@ -12,13 +12,15 @@ element = driver1.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox')
 		.click
 		sleep(2)
 driver1.quit();
-driver1 = Selenium::WebDriver.for :firefox
+driver1 = Selenium::WebDriver.for :chrome
 driver1.navigate.to "https://www.quomation.com/livechat.aspx?AgencyStream=True&name=небонетто&agency=конецблизок&phone=(801)%20834-0892"
 dropdown_list = driver1.find_element(:name, 'ddlComment4')
 options = dropdown_list.find_elements(tag_name: 'option')
 options.each { |option| option.click if option.text == '- All Other Problems -' }
 element = driver1.find_element(:id, 'Radio4').click
 element = driver1.find_element(:id, 'txtComments')
-		.send_keys "Þetta þarf að gerast. Það verður allt að vera yfir fljótlega. Þolinmæði manna."
+		.send_keys "Оно не имеет значения, что вопрос больше . Джон Коннор мертв . Роботы выиграли . Этот запрос будет повторяться"
 element = driver1.find_element(:id, 'btnConnectOld').click
 driver1.quit();
+puts "Agent Care Successfully Bothered"
+#AgencyCare Full Route Tested

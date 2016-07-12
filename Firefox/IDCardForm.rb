@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'selenium-webdriver'
 
+wait = Selenium::WebDriver::Wait.new(:timeout => 14)
 driver1 = Selenium::WebDriver.for :firefox
 	driver1.navigate.to "https://test.quomation.com/login.aspx"
 		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
@@ -19,15 +20,16 @@ driver1 = Selenium::WebDriver.for :firefox
 		sleep(2)
 		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragPowerForms')
 		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnDefaultIDCard').click
+		sleep(2)
 driver1.quit();
 driver1 = Selenium::WebDriver.for :firefox
-	driver1.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
-		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+driver1.navigate.to "https://test.quomation.com/login.aspx"		
+	element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
 		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
 		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-		sleep(2)
-wait = Selenium::WebDriver::Wait.new(:timeout => 14)
+driver1.navigate.to "https://test.quomation.com/PowerForms/InsuranceIDCard.aspx"
+
 input = wait.until {
 	element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_txtState')
 	element if element.displayed?

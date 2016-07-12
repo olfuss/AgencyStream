@@ -29,6 +29,7 @@ element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+driver3.navigate.to "https://test.quomation.com/PowerForms/CertOfLiability.aspx?id=-1"
 sleep(2)
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').send_keys "07042014"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtProducerName').send_keys "Producer Name"
@@ -190,13 +191,9 @@ element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd20').
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv18').send_keys "S"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv19').send_keys "S"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtSubWv20').send_keys "S"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr18').send_keys "A"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr26').send_keys "A"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr27').send_keys "A"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr28').send_keys "A"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtPolicyNum18').send_keys "PolNum18"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate18').send_keys "07042014"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate18').send_keys "07042017"
@@ -240,9 +237,9 @@ element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtInsrLtr28').se
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOther1').click
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOther2').click
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_chkOther3').click
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank2').send_keys "Blank 2"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank4').send_keys "Blank 4"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank6').send_keys "Blank 6"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank1').send_keys "Blank 2"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank3').send_keys "Blank 4"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank5').send_keys "Blank 6"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd26').send_keys "A"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd27').send_keys "B"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAddlInsrd28').send_keys "C"
@@ -258,9 +255,9 @@ element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyEffDate2
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate26').send_keys "07042017"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate27').send_keys "07042017"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPolicyExpDate28').send_keys "07042017"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank1').send_keys "Blank 2"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank3').send_keys "Blank 4"
-element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank5').send_keys "Blank 6"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank2').send_keys "Blank 2"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank4').send_keys "Blank 4"
+element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtOtherBlank6').send_keys "Blank 6"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim26').send_keys "101"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim27').send_keys "102"
 element = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_txtLim28').send_keys "103"
@@ -312,3 +309,4 @@ sleep(2)
 element = driver3.find_element(:id, 'ctl00_LoginView1_aLogout').click
 driver3.quit();
 puts "Liability Form Successfully Tested"
+#Liability Form Done

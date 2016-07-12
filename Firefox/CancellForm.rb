@@ -27,6 +27,7 @@ element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+driver5.navigate.to "https://test.quomation.com/PowerForms/Cancellation.aspx?id=-1"
 sleep(2)
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').send_keys "07042014"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerPhone')
@@ -143,5 +144,4 @@ sleep(2)
 element = driver5.find_element(:id, 'ctl00_LoginView1_aLogout').click
 driver5.quit();
 puts "Cancellation Form Successfully Tested"
-
-
+#Cancellation Form Done

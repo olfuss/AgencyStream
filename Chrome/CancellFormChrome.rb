@@ -20,13 +20,14 @@ cancel = wait.until {
 }
 	cancel.click
 driver5.quit();
-driver5 = Selenium::WebDriver.for :firefox
+driver5 = Selenium::WebDriver.for :chrome
 wait = Selenium::WebDriver::Wait.new(:timeout => 14)
 driver5.navigate.to "https://test.quomation.com/PowerForms/Cancellation.aspx?id=-1"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+driver5.navigate.to "https://test.quomation.com/PowerForms/Cancellation.aspx?id=-1"
 sleep(2)
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').send_keys "07042014"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_mskProducerPhone')
@@ -105,7 +106,7 @@ element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_txtRQOther2').sen
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
 driver5.quit();
-driver5 = Selenium::WebDriver.for :firefox
+driver5 = Selenium::WebDriver.for :chrome
 driver5.navigate.to "https://test.quomation.com/PowerForms/Cancellation.aspx?id=-1"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -114,7 +115,7 @@ element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').
 sleep(2)
 element = driver5.find_element(:id, 'ctl00_imgTopLogo').click
 driver5.quit();
-driver5 = Selenium::WebDriver.for :firefox
+driver5 = Selenium::WebDriver.for :chrome
 driver5.navigate.to "https://test.quomation.com/PowerForms/Cancellation.aspx?id=-1"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -124,7 +125,7 @@ sleep(2)
 driver5.navigate.to "https://test.quomation.com/PowerForms/Cancellation.aspx?id=-1"
 element = driver5.find_element(:id, 'home_icon').click
 driver5.quit();
-driver5 = Selenium::WebDriver.for :firefox
+driver5 = Selenium::WebDriver.for :chrome
 driver5.navigate.to "https://test.quomation.com/PowerForms/Cancellation.aspx?id=-1"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -133,7 +134,7 @@ element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').
 sleep(2)
 element = driver5.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver5.quit();
-driver5 = Selenium::WebDriver.for :firefox
+driver5 = Selenium::WebDriver.for :chrome
 driver5.navigate.to "https://test.quomation.com/PowerForms/Cancellation.aspx?id=-1"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -143,5 +144,4 @@ sleep(2)
 element = driver5.find_element(:id, 'ctl00_LoginView1_aLogout').click
 driver5.quit();
 puts "Cancellation Form Successfully Tested"
-
-
+#Cancellation Form Done

@@ -21,12 +21,13 @@ binder = wait.until {
 }
 	binder.click
 driver2.quit();
-driver2 = Selenium::WebDriver.for :firefox
+driver2 = Selenium::WebDriver.for :chrome
 driver2.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+driver2.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
 sleep(2)
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_mskDate').send_keys "07042014"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_txtAgencyAddress3').clear
@@ -187,7 +188,7 @@ element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_btnPrint').click
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_btnEmail').click
 element = driver2.find_element(:id, 'ctl00_imgTopLogo').click
 driver2.quit();
-driver2 = Selenium::WebDriver.for :firefox
+driver2 = Selenium::WebDriver.for :chrome
 driver2.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -196,7 +197,7 @@ element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').
 sleep(2)
 element = driver2.find_element(:id, 'home_icon').click
 driver2.quit();
-driver2 = Selenium::WebDriver.for :firefox
+driver2 = Selenium::WebDriver.for :chrome
 driver2.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -205,7 +206,7 @@ element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').
 sleep(2)
 element = driver2.find_element(:id, 'ctl00_loginViewChat_pnlLiveChatBox').click
 driver2.quit();
-driver2 = Selenium::WebDriver.for :firefox
+driver2 = Selenium::WebDriver.for :chrome
 driver2.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -214,7 +215,7 @@ element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').
 sleep(2)
 element = driver2.find_element(:id, 'ctl00_imgTopLogo').click
 driver2.quit();
-driver2 = Selenium::WebDriver.for :firefox
+driver2 = Selenium::WebDriver.for :chrome
 driver2.navigate.to "https://test.quomation.com/PowerForms/Binder.aspx?id=-1"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
 element = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
@@ -224,3 +225,4 @@ sleep(2)
 element = driver2.find_element(:id, 'ctl00_LoginView1_aLogout').click
 driver2.quit();
 puts "Binder Form Successfully Tested"
+#Done with Binder

@@ -954,3 +954,10 @@ element = driver1.find_element(:id, 'btnConnectOld').click
 driver1.quit();
 puts "Agent Care Successfully Bothered"
 #AgencyCare Full Route Tested
+driver1 = Selenium::WebDriver.for :firefox
+driver1.navigate.to "https://www.agencystream.com/login.aspx"
+element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys "65789"
+		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys "jwilcox"
+		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys "jw"
+		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+		sleep(2)

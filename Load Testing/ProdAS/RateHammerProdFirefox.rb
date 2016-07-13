@@ -3,28 +3,26 @@ require 'selenium-webdriver'
 
 wait = Selenium::WebDriver::Wait.new(:timeout => 30)
 
-quote1 = 1061943424
-quote2 = 1666178345
-quote3 = 901695744
-quote4 = 1267405152
-quote5 = 1130485888
-quote6 = 1168224512
-quote7 = 1002762048
-quote8 = 1058327424
-quote9 = 1551535872
-quote10 = 977019776
+quote1 = "HomeQuote.aspx?qid=1416518450"
+quote2 = "AutoQuote.aspx?qid=1883934336"
+quote3 = "AutoQuote.aspx?qid=1697838208"
+quote4 = "HomeQuote.aspx?qid=1521263488"
+quote5 = "AutoQuote.aspx?qid=1851817856"
+quote6 = "HomeQuote.aspx?qid=868235200"
+quote7 = "HomeQuote.aspx?qid=491194963"
+quote8 = "HomeQuote.aspx?qid=1055084608"
+quote9 = "AutoQuote.aspx?qid=1033416390"
+quote10 = "AutoQuote.aspx?qid=702415824"
 
 #setup
+=begin
 driver0 = Selenium::WebDriver.for :firefox
 driver0.navigate.to "https://www.agencystream.com/login.aspx"
-element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-        element0.send_keys("65789")
-    element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-        element0.send_keys("jwilcox")
-    element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-        element0.send_keys("jw")
+element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+    element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+    element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
     element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-  sleep(3)
+ sleep(3)
 driver0.navigate.to "https://www.agencystream.com/CarrierInfo.aspx"
 element0 = driver0.find_element(:id, 'chkCheckAllAuto').click
 element0 = driver0.find_element(:id, 'chkCheckAllAuto').click
@@ -36,20 +34,17 @@ element0 = driver0.find_element(:id, 'chkCheckAllHome').click
 element0 = driver0.find_element(:id, 'MainButtonSave').click
 sleep(3)
 driver0.quit();
-
+=end
 i=1
 loop do 
 	i+=1
 #Quote1		
 	driver1 = Selenium::WebDriver.for :firefox
 		print("Driver 1 Iteration #{i-1} Started \n")
-		driver1.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote1}"
-		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element.send_keys("65789")
-		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element.send_keys("jwilcox")
-		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element.send_keys("jw")
+		driver1.navigate.to "https://www.agencystream.com/#{quote1}"
+		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load = wait.until {
@@ -57,33 +52,41 @@ loop do
 			element if element.displayed?
 		}
 			load.send_keys(:control, '7')
+	if 
+		driver1.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 1 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 1 iteration #{i-1}"
+	end
 #Quote2
 	driver2 = Selenium::WebDriver.for :firefox
 		print("Driver 2 Iteration #{i-1} Started \n")
-		driver2.navigate.to "https://www.agencystream.com/HomeQuote.aspx?qid=#{quote2}"
-		element2 = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element2.send_keys("65789")
-		element2 = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element2.send_keys("jwilcox")
-		element2 = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element2.send_keys("jw")
+		driver2.navigate.to "https://www.agencystream.com/#{quote2}"
+		element2 = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element2 = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element2 = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element2 = driver2.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load2 = wait.until {
 			element2 = driver2.find_element(:id, 'btnContinue')
 			element2 if element2.displayed?
 		}
-			load2.send_keys(:control, '7')
+			load2.send_keys(:control, '6')
+	if 
+		driver2.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 2 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 2 iteration #{i-1}"
+	end
 #quote3
 	driver3 = Selenium::WebDriver.for :firefox
 		print("Driver 3 Iteration #{i-1} Started \n")
-		driver3.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote3}"
-		element3 = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element3.send_keys("65789")
-		element3 = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element3.send_keys("jwilcox")
-		element3 = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element3.send_keys("jw")
+		driver3.navigate.to "https://www.agencystream.com/#{quote3}"
+		element3 = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element3 = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element3 = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element3 = driver3.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load3 = wait.until {
@@ -91,123 +94,158 @@ loop do
 			element3 if element3.displayed?
 		}
 			load3.send_keys(:control, '6')
+	if 
+		driver3.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 3 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 3 iteration #{i-1}"
+	end
 #Quote4
 	driver4 = Selenium::WebDriver.for :firefox
 		print("Driver 4 Iteration #{i-1} Started \n")
-		driver4.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote4}"
-		element4 = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element4.send_keys("65789")
-		element4 = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element4.send_keys("jwilcox")
-		element4 = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element4.send_keys("jw")
+		driver4.navigate.to "https://www.agencystream.com/#{quote4}"
+		element4 = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element4 = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element4 = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element4 = driver4.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load4 = wait.until {
 			element4 = driver4.find_element(:id, 'btnContinue')
 			element4 if element4.displayed?
 		}
-			load4.send_keys(:control, '6')	
+			load4.send_keys(:control, '7')
+	if 
+		driver4.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 4 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 4 iteration #{i-1}"
+	end	
 #Quote5
 	driver5 = Selenium::WebDriver.for :firefox
 		print("Driver 5 Iteration #{i-1} Started \n")
-		driver5.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote5}"
-		element5 = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element5.send_keys("65789")
-		element5 = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element5.send_keys("jwilcox")
-		element5 = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element5.send_keys("jw")
+		driver5.navigate.to "https://www.agencystream.com/#{quote5}"
+		element5 = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element5 = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element5 = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element5 = driver5.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load5 = wait.until {
 			element5 = driver5.find_element(:id, 'btnContinue')
 			element5 if element5.displayed?
 		}
-			load5.send_keys(:control, '6')	
+			load5.send_keys(:control, '6')
+	if 
+		driver5.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 5 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 5 iteration #{i-1}"
+	end	
 #Quote6
 	driver6 = Selenium::WebDriver.for :firefox
 		print("Driver 6 Iteration #{i-1} Started \n")
-		driver6.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote6}"
-		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element6.send_keys("66789")
-		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element6.send_keys("jwilcox")
-		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element6.send_keys("jw")
+		driver6.navigate.to "https://www.agencystream.com/#{quote6}"
+		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load6 = wait.until {
 			element6 = driver6.find_element(:id, 'btnContinue')
 			element6 if element6.displayed?
 		}
-			load6.send_keys(:control, '6')	
+			load6.send_keys(:control, '7')
+	if 
+		driver6.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 6 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 6 iteration #{i-1}"
+	end	
 #Quote7
 	driver7 = Selenium::WebDriver.for :firefox
 		print("Driver 7 Iteration #{i-1} Started \n")
-		driver7.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote7}"
-		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element7.send_keys("77789")
-		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element7.send_keys("jwilcox")
-		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element7.send_keys("jw")
+		driver7.navigate.to "https://www.agencystream.com/#{quote7}"
+		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load7 = wait.until {
 			element7 = driver7.find_element(:id, 'btnContinue')
 			element7 if element7.displayed?
 		}
-			load7.send_keys(:control, '6')	
+			load7.send_keys(:control, '7')
+	if 
+		driver7.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 7 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 7 iteration #{i-1}"
+	end	
 #Quote8
 	driver8 = Selenium::WebDriver.for :firefox
 		print("Driver 8 Iteration #{i-1} Started \n")
-		driver8.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote8}"
-		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element8.send_keys("88889")
-		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element8.send_keys("jwilcox")
-		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element8.send_keys("jw")
+		driver8.navigate.to "https://www.agencystream.com/#{quote8}"
+		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load8 = wait.until {
 			element8 = driver8.find_element(:id, 'btnContinue')
 			element8 if element8.displayed?
 		}
-			load8.send_keys(:control, '6')	
+			load8.send_keys(:control, '7')
+	if 
+		driver8.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 8 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 8 iteration #{i-1}"
+	end	
 #Quote9
 	driver9 = Selenium::WebDriver.for :firefox
 		print("Driver 9 Iteration #{i-1} Started \n")
-		driver9.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote9}"
-		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element9.send_keys("99989")
-		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element9.send_keys("jwilcox")
-		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element9.send_keys("jw")
+		driver9.navigate.to "https://www.agencystream.com/#{quote9}"
+		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load9 = wait.until {
 			element9 = driver9.find_element(:id, 'btnContinue')
 			element9 if element9.displayed?
 		}
-			load9.send_keys(:control, '6')	
+			load9.send_keys(:control, '6')
+	if 
+		driver9.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 9 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 9 iteration #{i-1}"
+	end	
 #Quote10
 	driver10 = Selenium::WebDriver.for :firefox
 		print("Driver 10 Iteration #{i-1} Started \n")
-		driver10.navigate.to "https://www.agencystream.com/AutoQuote.aspx?qid=#{quote10}"
-		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element10.send_keys("101010810")
-		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element10.send_keys("jwilcox")
-		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element10.send_keys("jw")
+		driver10.navigate.to "https://www.agencystream.com/#{quote10}"
+		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("34574")
+		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
 	sleep(3)
 		load10 = wait.until {
 			element10 = driver10.find_element(:id, 'btnContinue')
 			element10 if element10.displayed?
 		}
-			load10.send_keys(:control, '6')	
+			load10.send_keys(:control, '6')
+	if 
+		driver10.page_source.include? 'Error'
+  	then 
+		puts "Rating error found on Driver 10 Iteration #{i-1}"
+			else
+		puts "NO rating errors on Driver 10 iteration #{i-1}"
+	end	
 end

@@ -14,6 +14,28 @@ quote8 = 1058327424
 quote9 = 1551535872
 quote10 = 977019776
 
+#setup
+driver0 = Selenium::WebDriver.for :firefox
+driver0.navigate.to "https://www.agencystream.com/login.aspx"
+element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
+        element0.send_keys("65789")
+    element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
+        element0.send_keys("jwilcox")
+    element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
+        element0.send_keys("jw")
+    element0 = driver0.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+  sleep(3)
+driver0.navigate.to "https://www.agencystream.com/CarrierInfo.aspx"
+element0 = driver0.find_element(:id, 'chkCheckAllAuto').click
+element0 = driver0.find_element(:id, 'chkCheckAllAuto').click
+element0 = driver0.find_element(:id, 'chkCheckAllAuto').click
+element0 = driver0.find_element(:id, 'tHome').click
+element0 = driver0.find_element(:id, 'chkCheckAllHome').click
+element0 = driver0.find_element(:id, 'chkCheckAllHome').click
+element0 = driver0.find_element(:id, 'chkCheckAllHome').click
+element0 = driver0.find_element(:id, 'MainButtonSave').click
+sleep(3)
+driver0.quit();
 
 i=1
 loop do 

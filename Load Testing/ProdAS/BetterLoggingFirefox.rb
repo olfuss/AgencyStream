@@ -37,5 +37,5 @@ loop do
 			else
 		puts "NO rating errors on Driver 1 iteration #{i-1}"
 	end
-	break if i==3
+	break if i==2
 end

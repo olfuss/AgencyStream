@@ -8,13 +8,13 @@ quote2 = 1666178345
 quote3 = 901695744
 quote4 = 1267405152
 quote5 = 1130485888
-quote6 = 1168224512
-quote7 = 1002762048
+quote6 = 1456779837
+quote7 = 1489909888
 quote8 = 1058327424
 quote9 = 1551535872
 quote10 = 977019776
-
-
+HQ = "https://test.quomation.com/HomeQuote.aspx?qid="
+AQ = "https://test.quomation.com/AutoQuote.aspx?qid="
 i=1
 loop do 
 	i+=1
@@ -29,10 +29,10 @@ loop do
 		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
 				element.send_keys("Odinsson1010")
 		element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-				driver1.navigate.to "https://test.quomation.com/HomeQuote.aspx?qid=#{quote1}"
+				driver1.navigate.to "#{HQ}#{quote1}"
 	sleep(5)
 		element = driver1.find_element(:id, 'tQuote').send_keys(:control, '7')
-		driver2 = wait.until {
+			driver2 = wait.until {
 			element = driver1.find_element(:id, 'btnQuote0')
 			element if element.displayed?
 		}
@@ -111,86 +111,91 @@ loop do
 #Quote6
 	driver6 = Selenium::WebDriver.for :firefox
 		print("Driver 6 Iteration #{i-1} Started \n")
-		driver6.navigate.to "https://test.quomation.com/AutoQuote.aspx?qid=#{quote6}"
-		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element6.send_keys("66789")
-		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element6.send_keys("olfuss.ratatosksson@quomation.com")
-		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element6.send_keys("Odinsson1010")
-		element6 = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-	sleep(3)
-		load6 = wait.until {
-			element6 = driver6.find_element(:id, 'btnContinue')
-			element6 if element6.displayed?
+		driver6.navigate.to "https://test.quomation.com/login.aspx"
+		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
+				element.send_keys("65789")
+		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
+				element.send_keys("olfuss.ratatosksson@quomation.com")
+		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
+				element.send_keys("Odinsson1010")
+		element = driver6.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+				driver6.navigate.to "https://test.quomation.com/#{AQ}.aspx?qid=#{quote6}"
+	sleep(5)
+		element = driver6.find_element(:id, 'tQuote').send_keys(:control, '7')
+		driver7 = wait.until {
+			element = driver1.find_element(:id, 'btnQuote0')
+			element if element.displayed?
 		}
-			load6.send_keys(:control, '6')	
 #Quote7
 	driver7 = Selenium::WebDriver.for :firefox
 		print("Driver 7 Iteration #{i-1} Started \n")
-		driver7.navigate.to "https://test.quomation.com/AutoQuote.aspx?qid=#{quote7}"
-		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element7.send_keys("77789")
-		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element7.send_keys("olfuss.ratatosksson@quomation.com")
-		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element7.send_keys("Odinsson1010")
-		element7 = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-	sleep(3)
-		load7 = wait.until {
-			element7 = driver7.find_element(:id, 'btnContinue')
-			element7 if element7.displayed?
+		driver7.navigate.to "https://test.quomation.com/login.aspx"
+		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
+				element.send_keys("65789")
+		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
+				element.send_keys("olfuss.ratatosksson@quomation.com")
+		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
+				element.send_keys("Odinsson1010")
+		element = driver7.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+				driver7.navigate.to "https://test.quomation.com/#{AQ}.aspx?qid=#{quote7}"
+	sleep(5)
+		element = driver7.find_element(:id, 'tQuote').send_keys(:control, '7')
+		driver8 = wait.until {
+			element = driver7.find_element(:id, 'btnQuote0')
+			element if element.displayed?
 		}
-			load7.send_keys(:control, '6')	
 #Quote8
 	driver8 = Selenium::WebDriver.for :firefox
 		print("Driver 8 Iteration #{i-1} Started \n")
-		driver8.navigate.to "https://test.quomation.com/AutoQuote.aspx?qid=#{quote8}"
-		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element8.send_keys("88889")
-		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element8.send_keys("olfuss.ratatosksson@quomation.com")
-		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element8.send_keys("Odinsson1010")
-		element8 = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-	sleep(3)
-		load8 = wait.until {
-			element8 = driver8.find_element(:id, 'btnContinue')
-			element8 if element8.displayed?
+		driver8.navigate.to "https://test.quomation.com/login.aspx"
+		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
+				element.send_keys("65789")
+		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
+				element.send_keys("olfuss.ratatosksson@quomation.com")
+		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
+				element.send_keys("Odinsson1010")
+		element = driver8.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+				driver8.navigate.to "https://test.quomation.com/HomeQuote.aspx?qid=#{quote8}"
+	sleep(5)
+		element = driver8.find_element(:id, 'tQuote').send_keys(:control, '7')
+		driver9 = wait.until {
+			element = driver8.find_element(:id, 'btnQuote0')
+			element if element.displayed?
 		}
-			load8.send_keys(:control, '6')	
 #Quote9
 	driver9 = Selenium::WebDriver.for :firefox
 		print("Driver 9 Iteration #{i-1} Started \n")
-		driver9.navigate.to "https://test.quomation.com/AutoQuote.aspx?qid=#{quote9}"
-		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element9.send_keys("99989")
-		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element9.send_keys("olfuss.ratatosksson@quomation.com")
-		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element9.send_keys("Odinsson1010")
-		element9 = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-	sleep(3)
-		load9 = wait.until {
-			element9 = driver9.find_element(:id, 'btnContinue')
-			element9 if element9.displayed?
+		driver9.navigate.to "https://test.quomation.com/login.aspx"
+		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
+				element.send_keys("65789")
+		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
+				element.send_keys("olfuss.ratatosksson@quomation.com")
+		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
+				element.send_keys("Odinsson1010")
+		element = driver9.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+				driver9.navigate.to "https://test.quomation.com/HomeQuote.aspx?qid=#{quote9}"
+	sleep(5)
+		element = driver9.find_element(:id, 'tQuote').send_keys(:control, '7')
+		driver10 = wait.until {
+			element = driver9.find_element(:id, 'btnQuote0')
+			element if element.displayed?
 		}
-			load9.send_keys(:control, '6')	
 #Quote10
 	driver10 = Selenium::WebDriver.for :firefox
 		print("Driver 10 Iteration #{i-1} Started \n")
-		driver10.navigate.to "https://test.quomation.com/AutoQuote.aspx?qid=#{quote10}"
-		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
-				element10.send_keys("101010810")
-		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
-				element10.send_keys("olfuss.ratatosksson@quomation.com")
-		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
-				element10.send_keys("Odinsson1010")
-		element10 = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
-	sleep(3)
-		load10 = wait.until {
-			element10 = driver10.find_element(:id, 'btnContinue')
-			element10 if element10.displayed?
+		driver10.navigate.to "https://test.quomation.com/login.aspx"
+		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID')
+				element.send_keys("65789")
+		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName')
+				element.send_keys("olfuss.ratatosksson@quomation.com")
+		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password')
+				element.send_keys("Odinsson1010")
+		element = driver10.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+				driver10.navigate.to "https://test.quomation.com/HomeQuote.aspx?qid=#{quote10}"
+	sleep(5)
+		element = driver10.find_element(:id, 'tQuote').send_keys(:control, '7')
+		driver1 = wait.until {
+			element = driver10.find_element(:id, 'btnQuote0')
+			element if element.displayed?
 		}
-			load10.send_keys(:control, '6')	
 end

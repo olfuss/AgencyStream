@@ -37,7 +37,19 @@ Then(/^the user clicks ok on the privacy popup$/) do
   element = driver.find_element(:id, 'btnPrivacyOK').click
 end
 
-Then(/^fills out all information on the driver1 tab$/) do
+Then(/^fills out all information on the driver 1 tab$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^fills out all information on the driver 2 tab$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^fills out all information on the driver 3 tab$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^fills out all information on the driver 4 tab$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
@@ -49,7 +61,19 @@ Then(/^enters information for one minor violation$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then(/^fills out all information on the vehicles tab$/) do
+Then(/^fills out all information on the vehicle 1 tab$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^fills out all information on the vehicle 2 tab$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^fills out all information on the vehicle 3 tab$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^fills out all information on the vehicle 4 tab$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
@@ -90,11 +114,14 @@ Then(/^an error will generate on the failed login attempt$/) do
 end
 
 Given(/^the user enters valid login information$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+ element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("65789")
+ element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+ element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
 end
 
 Then(/^the user will be directed to the AS Dashboard$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_gvClients').displayed?
 end
 
 Given(/^Firefox is directed to AgencyStream$/) do

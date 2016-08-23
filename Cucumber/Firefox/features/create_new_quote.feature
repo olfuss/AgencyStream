@@ -1,10 +1,10 @@
-Feature: Create New Quote 4x4
+Feature: Create New auto quote 4x4
 	
 	Scenario: The user creates a new auto quote
 		Given the user is logged into AgencyStream
 		And clicks the create new quote button
 		Then the type/zip popup should open
-		And the user selects the type and enters the zip code on the popup
+		And the user selects the type Auto and enters the zip code on the popup
 		And clicks start quote
 		Then the privacy warning popup should open
 		And the user clicks ok on the privacy popup

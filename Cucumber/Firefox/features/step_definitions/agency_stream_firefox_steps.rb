@@ -78,7 +78,8 @@ driver.navigate.to "https://test.quomation.com/login.aspx"
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("65789")
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("murder.face@murdermail.com")
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("YourPasswordSucks")
-  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').clickend
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+end
 
 Given(/^tries to login$/) do
   pending # Write code here that turns the phrase above into concrete actions

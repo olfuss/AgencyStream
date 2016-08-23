@@ -1,4 +1,4 @@
-Feature: Create New Quote
+Feature: Create New Quote 4x4
 	
 	Scenario: The user creates a new auto quote
 		Given the user is logged into AgencyStream
@@ -8,28 +8,23 @@ Feature: Create New Quote
 		And clicks start quote
 		Then the privacy warning popup should open
 		And the user clicks ok on the privacy popup
-		And fills out all information on the drivers tab
+		And fills out all information on the driver 1 tab
+		And fills out all information on the driver 2 tab
+		And fills out all information on the driver 3 tab
+		And fills out all information on the driver 4 tab
 		Then clicks continue
 		And enters information for one minor violation
 		Then clicks continue
-		And fills out all information on the vehicles tab
+		And fills out all information on the vehicle 1 tab
+		And fills out all information on the vehicle 2 tab
+		And fills out all information on the vehicle 3 tab
+		And fills out all information on the vehicle 4 tab
 		Then clicks continue
 		And fills out all information on the underwriting tab
 		Then clicks continue
 		And fills out all information on the coveraged tab
-		Then clicks the drivers tab
-		And verifies information entered is all there
-		Then clicks the violations tab
-		And verifies information entered is all there
-		Then clicks the vehicles tab
-		And verifies information entered is all there
-		Then clicks the underwriting tab
-		And verifies information entered is all there
-		Then clicks the coverages tab
-		And verifies information entered is all there
 		Then clicks the quote tab
 		And closes the duplicate customer window if it opens
-		Then the quote should be run on the quote page
 		And the user should see information returned from carriers
 		Then clean up
 

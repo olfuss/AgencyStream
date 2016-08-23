@@ -4,37 +4,40 @@ driver = Selenium::WebDriver.for :firefox
 
 Given(/^the user is logged into AgencyStream$/) do
   driver.navigate.to "https://test.quomation.com/login.aspx"
-  element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("65789")
-  element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
-  element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
-  element = driver1.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("65789")
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
+  sleep(3)
 end
 
 Given(/^clicks the create new quote button$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_btnNewQuote').click
 end
 
 Then(/^the type\/zip popup should open$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_dragNewQuote').displayed?
 end
 
-Then(/^the user selects the type and enters the zip code on the popup$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^the user selects the type Auto and enters the zip code on the popup$/) do
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_cmbQuoteType').send_keys"a"
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_txtZip').send_keys"84070"
 end
 
 Then(/^clicks start quote$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'btnStartQuote1').click  
 end
 
 Then(/^the privacy warning popup should open$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  sleep(3)
+  element = driver.find_element(:id, 'btnPrivacyOK').displayed?
 end
 
 Then(/^the user clicks ok on the privacy popup$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'btnPrivacyOK').click
 end
 
-Then(/^fills out all information on the drivers tab$/) do
+Then(/^fills out all information on the driver1 tab$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
@@ -58,30 +61,6 @@ Then(/^fills out all information on the coveraged tab$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then(/^clicks the drivers tab$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^verifies information entered is all there$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^clicks the violations tab$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^clicks the vehicles tab$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^clicks the underwriting tab$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^clicks the coverages tab$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 Then(/^clicks the quote tab$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
@@ -90,21 +69,16 @@ Then(/^closes the duplicate customer window if it opens$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then(/^the quote should be run on the quote page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 Then(/^the user should see information returned from carriers$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then(/^clean up$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 Given(/^the user enters invalid login information$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
+driver.navigate.to "https://test.quomation.com/login.aspx"
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("65789")
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("murder.face@murdermail.com")
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("YourPasswordSucks")
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').clickend
 
 Given(/^tries to login$/) do
   pending # Write code here that turns the phrase above into concrete actions
@@ -122,16 +96,8 @@ Then(/^the user will be directed to the AS Dashboard$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Given(/^the Firefox browser is opened$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 Given(/^Firefox is directed to AgencyStream$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^AgencyStream login page should be present on Firefox$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  driver.navigate.to "https://test.quomation.com/login.aspx"
 end
 
 Given(/^enters a valid auto quote ID into the search field$/) do

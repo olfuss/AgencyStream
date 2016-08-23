@@ -5,3 +5,4 @@ Feature: Search Home Quote
 		And enters a valid home quote ID into the search field
 		And clicks the search button
 		Then the browser will direct to the search results page
+		Then clean up

@@ -31,6 +31,7 @@ Feature: Create New Quote
 		And closes the duplicate customer window if it opens
 		Then the quote should be run on the quote page
 		And the user should see information returned from carriers
+		Then clean up
 
 
 

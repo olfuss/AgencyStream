@@ -12,6 +12,7 @@ Feature: Create New Quote 4x4
 		And fills out all information on the driver 2 tab
 		And fills out all information on the driver 3 tab
 		And fills out all information on the driver 4 tab
+		Then fills out mailing information
 		Then clicks continue
 		And enters information for one minor violation
 		Then clicks continue

@@ -1,4 +1,4 @@
 Feature: Clean Up
 
-	Scenario: Clean up
+	Scenario: clean up
 		Then clean up

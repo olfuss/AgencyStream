@@ -6,3 +6,4 @@ Feature: Search Home Quote
 		And clicks the search button
 		Then the browser will direct to the search results page
 		Then clean up
+		

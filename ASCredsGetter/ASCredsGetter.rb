@@ -36,5 +36,12 @@ nameid = gets.chomp
 		then puts "No useful credentials have been stored for this company."
 	end
 
+#Schroader Blackley
+	if nameid == "schroader blackley" or nameid == "schroader" or nameid == "Schroader Blackley" or nameid == "Schroader"
+		then puts "Agency ID is 34462"
+	elsif nameid == "34462"
+		then puts "Agency name is Schroader Blackley"
+	end
+
 puts "Exit with ENTER"
 gets 

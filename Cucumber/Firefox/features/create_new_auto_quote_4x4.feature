@@ -25,7 +25,6 @@ Feature: Create New Quote 4x4
 		Then clicks continue
 		And fills out all information on the coveraged tab
 		Then clicks the quote tab
-		And closes the duplicate customer window if it opens
 		And the user should see information returned from carriers
 		Then clean up
 

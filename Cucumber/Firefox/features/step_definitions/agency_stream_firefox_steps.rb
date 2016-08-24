@@ -161,9 +161,9 @@ end
 Then(/^enters information for one minor violation$/) do
   element = driver.find_element(:id, 'AddBtn1').click
   sleep(5)
-  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_gvViolDriver1_ctl02_cmbCategories').send_keys"n"
-  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_gvViolDriver1_ctl02_cmbViolations1').send_keys"s"
-  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_gvViolDriver1_ctl02_txtViolDate1').send_keys"08082015"
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_gvViolDriver1_ctl02_cmbCategories').click
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_gvViolDriver1_ctl02_cmbViolations1').send_keys(:arrow_down)
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_gvViolDriver1_ctl02_txtViolDate1').send_keys"08232015"
 end
 
 Then(/^fills out all information on the vehicle 1 tab$/) do
@@ -192,6 +192,7 @@ Then(/^fills out all information on the vehicle 1 tab$/) do
 end
 
 Then(/^fills out all information on the vehicle 2 tab$/) do 
+  sleep(5)
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbYear2').send_keys"22222222"
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_txtVINUnique2').click
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_txtMSRP2').send_keys"1100"
@@ -274,6 +275,7 @@ Then(/^fills out mailing information$/) do
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_mskPhoneNumber').send_keys(:arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left,
     :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, :arrow_left, "8018888888")
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbLead1_cmbLead1_TextBox').send_keys"p"
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_cmbLead1_cmbLead1_TextBox').send_keys(:arrow_down, :arrow_down, :arrow_down)
 end
 
 Then(/^fills out all information on the underwriting tab$/) do
@@ -311,21 +313,12 @@ Then(/^clicks the quote tab$/) do
   element = driver.find_element(:id, 'tQuote').click
 end
 
-Then(/^closes the duplicate customer window if it opens$/) do
-    driver = wait.until {
-    element = driver.find_element(:id, 'btnCloseMsgBox')
-    element if element.displayed?
-    }
-    driver.click 
-end
-
 Then(/^the user should see information returned from carriers$/) do
-  total = " 'tdTotalwFees' "
-  driver = wait.until {
-    element = driver.find_element(:id, '#{total}*')
+    driver = wait.until {
+    element = driver.find_element(:id, "tdTotalwFees").include?
       element if element.displayed?
   }
-  puts "#{total} returned"
+  puts "Totals with fees returned"
 end
 
 Given(/^the user enters invalid login information$/) do

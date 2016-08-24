@@ -26,6 +26,7 @@ Feature: Create New Quote 4x4
 		And fills out all information on the coveraged tab
 		Then clicks the quote tab
 		And the user should see information returned from carriers
+		Then gets quoteid
 		Then clean up
 
 

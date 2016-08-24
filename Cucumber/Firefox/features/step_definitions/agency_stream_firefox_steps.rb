@@ -7,7 +7,7 @@ Given(/^the user is logged into AgencyStream$/) do
   driver.navigate.to "https://test.quomation.com/login.aspx"
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_AgencyID').send_keys("65789")
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_UserName').send_keys("olfuss.ratatosksson@quomation.com")
-  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson1010")
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_Password').send_keys("Odinsson101010")
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_btnLogin').click
   sleep(3)
 end
@@ -315,10 +315,16 @@ end
 
 Then(/^the user should see information returned from carriers$/) do
     driver = wait.until {
-    element = driver.find_element(:id, "tdTotalwFees").include?
+    element = driver.find_element(:id, "tdTotalwFees1")
       element if element.displayed?
   }
   puts "Totals with fees returned"
+end
+
+Then(/^gets quoteid$/) do
+  element = driver.current_url
+  element['https://test.quomation.com/AutoQuote.aspx?qid='] = ''
+  puts "#{element}"
 end
 
 Given(/^the user enters invalid login information$/) do
@@ -333,7 +339,7 @@ Given(/^tries to login$/) do
 end
 
 Then(/^an error will generate on the failed login attempt$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_Login_FailureText').displayed?
 end
 
 Given(/^the user enters valid login information$/) do
@@ -352,21 +358,23 @@ Given(/^Firefox is directed to AgencyStream$/) do
 end
 
 Given(/^enters a valid auto quote ID into the search field$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_txtSearch').send_keys""
 end
 
 Given(/^clicks the search button$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'imgBtnSearch').click
 end
 
 Then(/^the browser will direct to the search results page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_gvClients').displayed? 
 end
 
 Given(/^enters a valid home quote ID into the search field$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  element = driver.find_element(:id, 'ctl00_ContentPlaceHolderSidebar_txtSearch').send_keys"1061943424"
 end
 
 Then(/^clean up$/) do
   driver.quit();
 end
+
+

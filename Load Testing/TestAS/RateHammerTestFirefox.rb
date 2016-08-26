@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'selenium-webdriver'
 
 wait = Selenium::WebDriver::Wait.new(:timeout => 120)

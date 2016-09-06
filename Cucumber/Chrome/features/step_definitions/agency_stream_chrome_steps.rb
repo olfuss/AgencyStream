@@ -1,7 +1,7 @@
 require 'selenium-webdriver'
 require 'rspec'
  
-driver = Selenium::WebDriver.for :firefox
+driver = Selenium::WebDriver.for :chrome
 wait = Selenium::WebDriver::Wait.new(:timeout => 30)
 
 Given(/^the user is logged into AgencyStream$/) do
@@ -354,7 +354,7 @@ Then(/^the user will be directed to the AS Dashboard$/) do
   element = driver.find_element(:id, 'ctl00_ContentPlaceHolder1_gvClients').displayed?
 end
 
-Given(/^Firefox is directed to AgencyStream$/) do
+Given(/^Chrome is directed to AgencyStream$/) do
   driver.navigate.to "https://test.quomation.com/login.aspx"
 end
 
